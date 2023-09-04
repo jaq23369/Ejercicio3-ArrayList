@@ -80,6 +80,16 @@ public class Curso {
         return examenes;
     }
 
+    public ArrayList<String> getSedesExamenes() {
+        ArrayList<String> sedes = new ArrayList<>();
+        for (Examen examen : examenes) {
+            if (!sedes.contains(examen.getSede())) {
+                sedes.add(examen.getSede());
+            }
+        }
+        return sedes;
+    }
+
  /**
      * Agrega un examen a la lista de exámenes del curso.
      *
